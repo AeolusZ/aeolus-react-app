@@ -8,11 +8,17 @@ class InCome extends Component {
   constructor(props) {
     super(props);
     this.state= {
-      showChild: false
+      showChild: false,
+      showChildText: ''
     }
   }
   isShowChild = () => {
     this.setState({showChild: !this.state.showChild})
+  }
+  getChild = (e) => {
+    return () => {
+      this.setState({showChildText: e})
+    }
   }
   render() {
     return (<div>
@@ -21,8 +27,11 @@ class InCome extends Component {
       <span style={{color: HINT[this.state.showChild].split('-')[1]}}>
         {HINT[this.state.showChild].split('-')[0]}
       </span>）
+      <br/>
+      我的孩子向我传递的信息是：{this.state.showChildText}
       <br/><br/>
-      <FormPractice show={this.state.showChild}/>
+      {/* 父组件向子组件通讯 */}
+      <FormPractice show={this.state.showChild} getChild={this.getChild}/>
     </div>)
   }
 }

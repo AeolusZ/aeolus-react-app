@@ -68,7 +68,7 @@ babel-preset-env 与 babel-preset-latest（babel-preset-es2015，babel-preset-es
 babel-preset-stage-x preset 中的任何转换都是对未被批准为 JavaScript 版本一部分的语言的变化(如 es6 / es2015 )
 babel-preset-react 解析与react有关的一些组件
 
-#父子组件传值
+#父子组件传值（2019/1/2）
 
 
 
