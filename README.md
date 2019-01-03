@@ -68,7 +68,11 @@ babel-preset-env 与 babel-preset-latest（babel-preset-es2015，babel-preset-es
 babel-preset-stage-x preset 中的任何转换都是对未被批准为 JavaScript 版本一部分的语言的变化(如 es6 / es2015 )
 babel-preset-react 解析与react有关的一些组件
 
-#父子组件传值（2019/1/2）
+#父子组件传值 (2019/1/2)
+
+#兄弟组件传值 (消费者模式 2019/1/3)
+首先创建一个消费者模式的类，然后在兄弟组件之间分别调用发布和订阅的方法，即可实现兄弟组件之间传值
+
 
 
 
