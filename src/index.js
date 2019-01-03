@@ -1,5 +1,8 @@
 import React, {Component} from 'react'
 import FormPractice from './FormPractice'
+import Child1 from './FormPractice/Child1'
+import Child2 from './FormPractice/Child2'
+
 const HINT = {
   "true" : '隐藏-green',
   "false" : '显示-red'
@@ -32,6 +35,9 @@ class InCome extends Component {
       <br/><br/>
       {/* 父组件向子组件通讯 */}
       <FormPractice show={this.state.showChild} getChild={this.getChild}/>
+      {/* 观察者(发布-订阅)模式实现兄弟组件之间通信 */}
+      <Child1/>
+      <Child2/>
     </div>)
   }
 }
