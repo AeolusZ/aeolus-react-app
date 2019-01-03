@@ -11,9 +11,12 @@ class Child2 extends Component {
   componentDidUpdate() {
     console.log('Child_2 update');
   }
+  toBrother = () => {
+    eventProxy.trigger('child1', '我是你弟弟')
+  }
   render() {
     return(<div>
-      Child2
+      <button onClick={this.toBrother}>Child2</button>（点我，我要向我哥哥传值）
     </div>)
   }
 }

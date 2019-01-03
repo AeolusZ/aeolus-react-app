@@ -35,8 +35,10 @@ class InCome extends Component {
       <br/><br/>
       {/* 父组件向子组件通讯 */}
       <FormPractice show={this.state.showChild} getChild={this.getChild}/>
+      <br/><br/>
       {/* 观察者(发布-订阅)模式实现兄弟组件之间通信 */}
       <Child1/>
+      <br/><br/>
       <Child2/>
     </div>)
   }

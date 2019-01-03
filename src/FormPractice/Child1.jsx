@@ -6,7 +6,8 @@ class Child1 extends Component {
     super(props)
     this.state = {
       msg: 'start',
-      title: 'aaa'
+      title: 'aaa',
+      child1: ''
     }
   }
   componentDidMount() {
@@ -15,6 +16,9 @@ class Child1 extends Component {
     }, title => {
       this.setState({title})
     })
+    eventProxy.on('child1', child1 => {
+      this.setState({child1})
+    })
   }
   componentDidUpdate() {
     console.log('Child_1 update');
@@ -22,7 +26,9 @@ class Child1 extends Component {
   render() {
     console.log(this.state.title)
     return(<div>
-      Child1 component: {this.state.msg} {this.state.title}
+      Child1 component: {this.state.msg} {this.state.title} 
+      <br/>
+      我弟弟传过来的值是：<span style={{color: 'pink'}}>{this.state.child1}</span>
     </div>)
   }
 }
