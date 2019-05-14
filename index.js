@@ -5,14 +5,18 @@ import {BrowserRouter, Route} from 'react-router-dom'
 import InCome from './src'
 import FormPractice from './src/FormPractice'
 import Event from './src/event'
+import Practice from './src/practice'
 
 ReactDOM.render(
   <BrowserRouter>
     <div>
+    {console.log(document.getElementById('app'))}
       <Route exact path='/' component={InCome}/>
       <Route path='/formPractice' component={FormPractice}/>  
-      <Route path='/event' component={Event}/>  
+      <Route path='/event' component={Event}/>
+      <Route path='/practice' component={Practice}/>  
     </div>
   </BrowserRouter>,
   document.getElementById('app')
 )
+console.log(document.getElementById('app'))
