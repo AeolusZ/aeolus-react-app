@@ -5,17 +5,25 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --inline --progress --colors --mode development",
-    "bulid": "webpack --config ./webpack.prod.config.js --inline --progress --colors --mode production"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --inline --progress --colors --mode development",
+    "bulid": "cross-env NODE_ENV=production webpack --config ./webpack.prod.config.js --inline --progress --colors --mode production"
   },
   "author": "aeolus",
   "license": "ISC",
   "dependencies": {
+    "cross-env": "^5.2.0",
     "eventproxy": "^1.0.0",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "immutable": "^4.0.0-rc.12",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
     "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "redux-immutable": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -26,6 +34,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "html-webpack-plugin": "^3.2.0",
     "open-browser-webpack-plugin": "0.0.5",
+    "redux-devtools-extension": "^2.13.8",
     "webpack": "^4.28.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.14"

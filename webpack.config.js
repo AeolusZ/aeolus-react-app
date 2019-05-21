@@ -4,6 +4,7 @@ const webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 module.exports = {
+  devtool: 'source-map',
   entry: './index.js',
   output: {
     path : path.resolve(__dirname, 'dist'),
