@@ -1,3 +1,4 @@
+// 图片懒加载
 import React from 'react'
 
 class LazyLoad extends React.PureComponent {
