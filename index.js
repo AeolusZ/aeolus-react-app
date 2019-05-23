@@ -11,6 +11,7 @@ import InCome from './src'
 import FormPractice from './src/FormPractice'
 import Event from './src/event'
 import Practice from './src/practice'
+import lazyLoad from './src/practice/lazyLoad'
 
 import practiceReducer from './src/practice/reducer'
 const reducers = combineReducers({
@@ -26,7 +27,8 @@ const router = <BrowserRouter>
     <Route exact path='/' component={InCome}/>
     <Route path='/formPractice' component={FormPractice}/>  
     <Route path='/event' component={Event}/>
-    <Route path='/practice' component={Practice}/>  
+    <Route path='/practice' component={Practice}/>
+    <Route path='/lazy' component={lazyLoad}/>  
   </div>
 </BrowserRouter>
 
