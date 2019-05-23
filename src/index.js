@@ -2,11 +2,13 @@ import React, {Component} from 'react'
 import FormPractice from './FormPractice'
 import Child1 from './FormPractice/Child1'
 import Child2 from './FormPractice/Child2'
+import WenSelf from './wenSelf'
+import './style.css'
 
-const HINT = {
-  "true" : '隐藏-green',
-  "false" : '显示-red'
-}
+// const HINT = {
+//   "true" : '隐藏-green',
+//   "false" : '显示-red'
+// }
 class InCome extends Component {
   constructor(props) {
     super(props);
@@ -24,8 +26,18 @@ class InCome extends Component {
     }
   }
   render() {
-    return (<div>
-      <button onClick={this.isShowChild}>我是父组件</button>
+    return(<div className='content'>
+      {/* 个人资料 */}
+      <WenSelf class='left'/>
+      {/* 图片新闻内容 */}
+      <div className='middle'></div>
+      {/* 通告活动 */}
+      <div className='right'></div>
+    </div>)
+    // return (<ul>
+    //   <li><a href='/lazy'>图片懒加载</a></li>
+    //   <li><a href='/pre'>图片预加载</a></li>
+      {/* <button onClick={this.isShowChild}>我是父组件</button>
       （点我，我的子组件会
       <span style={{color: HINT[this.state.showChild].split('-')[1]}}>
         {HINT[this.state.showChild].split('-')[0]}
@@ -34,13 +46,13 @@ class InCome extends Component {
       我的孩子向我传递的信息是：{this.state.showChildText}
       <br/><br/>
       {/* 父组件向子组件通讯 */}
-      <FormPractice show={this.state.showChild} getChild={this.getChild}/>
+      {/* <FormPractice show={this.state.showChild} getChild={this.getChild}/>
       <br/><br/>
       {/* 观察者(发布-订阅)模式实现兄弟组件之间通信 */}
-      <Child1/>
+      {/* <Child1/>
       <br/><br/>
-      <Child2/>
-    </div>)
+      <Child2/> */}
+    // </ul>)
   }
 }
 export default InCome

@@ -1,0 +1,13 @@
+.content {
+    display: flex;
+}
+.left {
+    width: 300px;
+    border: 1px solid #cccccc;
+}
+.middle {
+    flex: 1;
+}
+.right {
+    width: 300px;
+}
