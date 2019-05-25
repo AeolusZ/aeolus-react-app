@@ -3,6 +3,7 @@ import FormPractice from './FormPractice'
 import Child1 from './FormPractice/Child1'
 import Child2 from './FormPractice/Child2'
 import WenSelf from './wenSelf'
+import WenContent from './wenContent'
 import './style.css'
 
 // const HINT = {
@@ -30,7 +31,7 @@ class InCome extends Component {
       {/* 个人资料 */}
       <WenSelf class='left'/>
       {/* 图片新闻内容 */}
-      <div className='middle'></div>
+      <WenContent class='middle'/>
       {/* 通告活动 */}
       <div className='right'></div>
     </div>)
