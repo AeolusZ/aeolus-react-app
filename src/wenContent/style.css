@@ -1,18 +1,28 @@
-#imgContent{
-    margin-left: 10px;
-    width: 2000px;
-    height: 350px;
-    overflow: hidden;
-}
+ul,li{padding:0; margin:0;}
 li{
     list-style: none
 }
 #imgContent li {
+    padding:0; 
+    margin:0;
     float: left;
     width: 500px;
-    height: 350px;
+    height: 330px;
 }
 .imgContent_imgs{
     width: 500px;
     height: 300px;
+    /* 图片与div元素之间有间隔 */
+    vertical-align: bottom; 
+}
+.imgContent_desc {
+    box-sizing: border-box;
+    position: relative;
+    width: 500px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    color: white;
+    background-color: #cccccc; 
+    opacity: 0.8
 }

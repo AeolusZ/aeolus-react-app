@@ -13,6 +13,8 @@ import Event from './src/event'
 import Practice from './src/practice'
 import lazyLoad from './src/practice/lazyLoad'
 import PreLoad from './src/practice/preLoad'
+import WebSockets from './src/practice/webSockets'
+import FuncComponent from './src/practice/funcComponent'
 
 import practiceReducer from './src/practice/reducer'
 const reducers = combineReducers({
@@ -30,7 +32,9 @@ const router = <BrowserRouter>
     <Route path='/event' component={Event}/>
     <Route path='/practice' component={Practice}/>
     <Route path='/lazy' component={lazyLoad}/>
-    <Route path='/pre' component={PreLoad}/>  
+    <Route path='/pre' component={PreLoad}/> 
+    <Route path='/socket' component={WebSockets}/>
+    <Route path='/func' component={FuncComponent}/>  
   </div>
 </BrowserRouter>
 
