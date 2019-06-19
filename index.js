@@ -14,7 +14,7 @@ import Practice from './src/practice'
 import lazyLoad from './src/practice/lazyLoad'
 import PreLoad from './src/practice/preLoad'
 import WebSockets from './src/practice/webSockets'
-import FuncComponent from './src/practice/funcComponent'
+import {FuncComponent, FuncComponent1} from './src/practice/funcComponent'
 
 import practiceReducer from './src/practice/reducer'
 const reducers = combineReducers({
@@ -34,7 +34,8 @@ const router = <BrowserRouter>
     <Route path='/lazy' component={lazyLoad}/>
     <Route path='/pre' component={PreLoad}/> 
     <Route path='/socket' component={WebSockets}/>
-    <Route path='/func' component={FuncComponent}/>  
+    <Route path='/func' component={FuncComponent}/>
+    <Route path='/func1' component={FuncComponent1}/>  
   </div>
 </BrowserRouter>
 
